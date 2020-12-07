@@ -87,9 +87,9 @@ CREATE TABLE `patients` (
 --
 
 INSERT INTO `patients` (`patients_id`, `name`, `patients_add`, `lat`, `lng`, `temp`, `bpm`, `blood oxygen`, `a_id`, `Date-Time`) VALUES
-(1010, 'Akshay', 'Main Street', 42.1049, -75.9361, NULL, NULL, NULL, 1, '2020-12-07 18:19:05'),
-(1011, 'charuhas', 'Dunkin', 42.105, -75.934, NULL, NULL, NULL, 2, '2020-12-07 18:19:05'),
-(1012, 'parneet', 'Johnson City', 42.1158, -75.9598, NULL, NULL, NULL, 4, '2020-12-07 18:19:05');
+(1010, 'Akshay', 'Main Street', 42.1049, -75.9361, 95.35, 83, 99, 1, '2020-12-07 15:11:05'),
+(1011, 'charuhas', 'Dunkin', 42.105, -75.934, 98.31, 87, 100, 2, '2020-12-07 15:17:22'),
+(1012, 'parneet', 'Johnson City', 42.1158, -75.9598, 102, 95, 97, 4, '2020-12-07 17:30:45');
 
 -- --------------------------------------------------------
 
