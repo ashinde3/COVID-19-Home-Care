@@ -35,6 +35,9 @@
                              <th>patients_add</th>
                              <th>lat</th>
                              <th>lng</th>
+                             <th>temp(Farenheit)</th>
+                             <th>avg bpm</th>
+                             <th>date-time</th>
                           </tr>
                        </thead>
 
@@ -71,6 +74,15 @@ while($row = mysqli_fetch_assoc($result)) { ?>
                               </td>
                               <td>
                               <?php echo $row['lng']; ?>
+                              </td>
+                              <td>
+                              <?php echo $row['temp']; ?>
+                              </td>
+                              <td>
+                              <?php echo $row['bpm']; ?>
+                              </td>
+                              <td>
+                              <?php echo $row['Date-Time']; ?>
                               </td>
                            </tr>
                         </tbody>

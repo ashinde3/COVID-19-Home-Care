@@ -75,6 +75,8 @@ CREATE TABLE `patients` (
   `patients_add` varchar(100) NOT NULL,
   `lat` float DEFAULT NULL,
   `lng` float DEFAULT NULL,
+  `temp` float DEFAULT NULL,
+  `bpm` float DEFAULT NULL,
   `a_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -82,10 +84,10 @@ CREATE TABLE `patients` (
 -- Dumping data for table `patients`
 --
 
-INSERT INTO `patients` (`patients_id`, `name`, `patients_add`, `lat`, `lng`, `a_id`) VALUES
-(1010, 'Akshay', 'Main Street', 42.1049, -75.9361, 1),
-(1011, 'charuhas', 'Dunkin', 42.105, -75.934, 2),
-(1012, 'parneet', 'Johnson City', 42.1158, -75.9598, 4);
+INSERT INTO `patients` (`patients_id`, `name`, `patients_add`, `lat`, `lng`, `temp`, `bpm`, `a_id`) VALUES
+(1010, 'Akshay', 'Main Street', 42.1049, -75.9361, NULL, NULL, 1),
+(1011, 'charuhas', 'Dunkin', 42.105, -75.934, NULL, NULL, 2),
+(1012, 'parneet', 'Johnson City', 42.1158, -75.9598, NULL, NULL, 4);
 
 -- --------------------------------------------------------
 

@@ -2,25 +2,25 @@
    include("config.php");
    session_start();
    global $Error ;
-   
+
    if($_SERVER["REQUEST_METHOD"] == "POST") {
-      // username and password sent from form 
-      
+      // username and password sent from form
+
       $myusername = mysqli_real_escape_string($db,$_POST['username']);
-      $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
-      
+      $mypassword = mysqli_real_escape_string($db,$_POST['password']);
+
       $sql = "SELECT uid FROM users WHERE uname = '$myusername' and upassword = '$mypassword'";
       $result = mysqli_query($db,$sql);
        $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      
+
       $count = mysqli_num_rows($result);
-      
+
       // If result matched $myusername and $mypassword, table row must be 1 row
-        
+
       if($count == 1) {
-        
+
          $_SESSION['login_user'] = $myusername;
-         
+
          header("location: index.php");
       }else {
          $Error = "Your Login Name or Password is invalid";
@@ -39,8 +39,13 @@
 <title>Bootstrap Simple Login Form</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style type="text/css">
+  body {
+      background-image: url("images/covid-bg2.jpg");
+      background-size: 100%;
+      background-repeat: no-repeat;
+  }
 	.login-form {
 		width: 340px;
     	margin: 50px auto;
@@ -58,7 +63,7 @@
         min-height: 38px;
         border-radius: 2px;
     }
-    .btn {        
+    .btn {
         font-size: 15px;
         font-weight: bold;
     }
@@ -67,7 +72,7 @@
 <body>
 <div class="login-form">
     <form action="" method="post">
-        <h2 class="text-center">Admin Log in</h2>       
+        <h2 class="text-center">Admin Log in</h2>
         <div class="form-group">
             <input type="text" class="form-control" placeholder="Username" required="required" name = "username">
         </div>
@@ -77,10 +82,10 @@
         <div class="form-group">
             <button type="submit" class="btn btn-primary btn-block">Log in</button>
         </div>
-                
+
     </form>
      <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $Error; ?></div>
 </div>
 
 </body>
-</html>                                		                            
+</html>
