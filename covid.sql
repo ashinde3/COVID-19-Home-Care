@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 07, 2020 at 03:39 AM
+-- Generation Time: Dec 07, 2020 at 07:49 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -77,17 +77,19 @@ CREATE TABLE `patients` (
   `lng` float DEFAULT NULL,
   `temp` float DEFAULT NULL,
   `bpm` float DEFAULT NULL,
-  `a_id` int(11) NOT NULL
+  `blood oxygen` int(11) DEFAULT NULL,
+  `a_id` int(11) NOT NULL,
+  `Date-Time` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `patients`
 --
 
-INSERT INTO `patients` (`patients_id`, `name`, `patients_add`, `lat`, `lng`, `temp`, `bpm`, `a_id`) VALUES
-(1010, 'Akshay', 'Main Street', 42.1049, -75.9361, NULL, NULL, 1),
-(1011, 'charuhas', 'Dunkin', 42.105, -75.934, NULL, NULL, 2),
-(1012, 'parneet', 'Johnson City', 42.1158, -75.9598, NULL, NULL, 4);
+INSERT INTO `patients` (`patients_id`, `name`, `patients_add`, `lat`, `lng`, `temp`, `bpm`, `blood oxygen`, `a_id`, `Date-Time`) VALUES
+(1010, 'Akshay', 'Main Street', 42.1049, -75.9361, NULL, NULL, NULL, 1, '2020-12-07 18:19:05'),
+(1011, 'charuhas', 'Dunkin', 42.105, -75.934, NULL, NULL, NULL, 2, '2020-12-07 18:19:05'),
+(1012, 'parneet', 'Johnson City', 42.1158, -75.9598, NULL, NULL, NULL, 4, '2020-12-07 18:19:05');
 
 -- --------------------------------------------------------
 
