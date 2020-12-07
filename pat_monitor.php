@@ -43,7 +43,7 @@
 
 <?php
 include('config.php');
-$sql = "select * from patients" ;
+$sql = "select * from patients where temp > 102" ;
 if (mysqli_query($db, $sql)) {
 echo "";
 } else {
