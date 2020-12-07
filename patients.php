@@ -37,6 +37,7 @@
                              <th>lng</th>
                              <th>temp(Farenheit)</th>
                              <th>avg bpm</th>
+                             <th>blood oxygen</th>
                              <th>date-time</th>
                           </tr>
                        </thead>
@@ -80,6 +81,9 @@ while($row = mysqli_fetch_assoc($result)) { ?>
                               </td>
                               <td>
                               <?php echo $row['bpm']; ?>
+                              </td>
+                              <td>
+                              <?php echo $row['blood oxygen']; ?>
                               </td>
                               <td>
                               <?php echo $row['Date-Time']; ?>
