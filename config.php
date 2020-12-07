@@ -1,5 +1,5 @@
 <?php
-   define('DB_SERVER', 'localhost');
+   define('DB_SERVER', '34.71.128.221');
    define('DB_USERNAME', 'root');
    define('DB_PASSWORD', '');
    define('DB_DATABASE', 'covid');
